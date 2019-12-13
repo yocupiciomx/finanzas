@@ -5,6 +5,9 @@
 #Versión 3.x.x de Python
 #Sitio Web www.respirocodigo.com
 #Inicio 26 de Octubre de 2019
+#Monto del pago mensual mediante Saldos Insolutos
+#Contribución Joshyba
+#Sitio Web www.JoshybaDevelopments.blogspot.com
 #Fin ...
 
 print("Software de Finanzas Generales")
@@ -15,8 +18,9 @@ tipo = str(input("""Elige la letra de la operación deseada:
 	Anualidad...............(A)
 	Número de Anualidades...(n)
 	Tasa de Interés.........(i)
+    Pago mensual S.I........(S)
 	"""))
-if tipo == "F" or "P" or "A" or "n" or "i":
+if tipo == "F" or "P" or "A" or "n" or "i" or "S":
 
 	if tipo == "F":
 		A = float(input("Valor de la anualidad, A = $"))
@@ -171,3 +175,16 @@ if tipo == "F" or "P" or "A" or "n" or "i":
 				p = A*((1+i)-(1+i)**(1-n))/i
 			ii = i*1200
 			print("i% = {}%\nP = ${:,}\np = ${:,}\nn = {}\ni = {}\nA = ${:,}".format(round(ii,2),round(P,2),round(p,2),n,i,A))
+
+	elif tipo == "S":
+		Monto = float(input("Monto del prestamo = $"))
+		NumCuotas = float(input("Número de cuotas = "))
+		TM = float(input("Tasa de interés mensual sin Iva = "))
+		TM=TM/100
+		I2=TM*(1+0.16)
+		I3=I2+1
+		I4=I3**-NumCuotas
+		I2xMonto=I2*Monto
+		UnoMenossI4=1-I4
+		MMensual =I2xMonto/UnoMenossI4
+		print("Monto mensual a pagar $",MMensual)
