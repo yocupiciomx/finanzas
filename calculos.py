@@ -3,7 +3,7 @@
 #Software de Finanzas Generales
 #Desarrollado por Angel Yocupicio
 #Versión 3.x.x de Python
-#Sitio Web www.respirocodigo.com
+#Sitio Web www.yocupicio.com
 #Inicio 26 de Octubre de 2019
 #Monto del pago mensual mediante Saldos Insolutos
 #Contribución Joshyba
