@@ -18,7 +18,7 @@ tipo = str(input("""Elige la letra de la operación deseada:
 	Anualidad...............(A)
 	Número de Anualidades...(n)
 	Tasa de Interés.........(i)
-    Pago mensual S.I........(S)
+	Pago mensual S.I........(S)
 	"""))
 if tipo == "F" or "P" or "A" or "n" or "i" or "S":
 
